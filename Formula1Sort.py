@@ -1,4 +1,13 @@
+# Course: CS361 - Software Engineering
+# Author: Peter Storum
+# Assignment: Exercise 0
+# Description: Program that takes a file that contains Formula 1 Driver data and outputs data in alphabetical order
+# and numerical order
+
 def read_f1_drivers():
+    """
+    :returns a 2d list of data pulled from a given text file
+    """
     driver_data = [[], [], [], []]
     with open('CS361 Exercise 0 2021 F1 Drivers.txt') as file:
         temp_driver_arr = 1
@@ -15,6 +24,10 @@ def read_f1_drivers():
 
 
 def output_drivers_alphabetical(data):
+    """
+    takes the given data and sorts the last names alphabetically. The sorted list is then used to print data from the
+    given data, displaying the data in alphabetical order.
+    """
     last_names = []
     for name in data[1]:
         last_names.append(name)
@@ -25,6 +38,10 @@ def output_drivers_alphabetical(data):
 
 
 def output_drivers_numerical(data):
+    """
+    takes the given data and sorts the driver numbers. The sorted list is then used to print data from the
+    given data, displaying the data in numerical order.
+    """
     numbers = []
     for num in data[2]:
         numbers.append(num)
